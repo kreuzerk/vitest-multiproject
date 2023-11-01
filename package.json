@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "vitest",
+    "test:lib": "vitest --config projects/my-lib/vite.config.ts",
+    "test:app": "vitest --config projects/my-app/vite.config.ts"
   },
   "private": true,
   "dependencies": {
@@ -23,17 +25,22 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
+    "@analogjs/platform": "^0.2.18",
+    "@analogjs/vite-plugin-angular": "^0.2.18",
     "@angular-devkit/build-angular": "^16.2.8",
     "@angular/cli": "^16.2.5",
     "@angular/compiler-cli": "^16.2.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
+    "jsdom": "^22.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^16.2.0",
-    "typescript": "~5.1.3"
+    "typescript": "~5.1.3",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
   }
 }
